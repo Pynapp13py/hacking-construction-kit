@@ -1,0 +1,1 @@
+﻿Try to capture image only if a motion is detected

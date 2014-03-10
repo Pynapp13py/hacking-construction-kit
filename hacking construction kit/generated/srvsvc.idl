@@ -1,0 +1,82 @@
+[
+ uuid(4b324fc8-1670-01d3-1278-5a47bf6ee188),
+ version(3.0)
+] interface srvsvc
+{
+void func0();
+void func1();
+void func2();
+void func3();
+void func4();
+void func5();
+void func6();
+void func7();
+void func8();
+void func9();
+void func0a();
+void func0b();
+void func0c();
+void func0d();
+void func0e();
+void func0f();
+void func10();
+void func11();
+void func12();
+void func13();
+void func14();
+void func15();
+void func16();
+void func17();
+void func18();
+void func19();
+void func1a();
+void func1b();
+typedef struct {
+		int elapsed; /* time(NULL) */
+		int msecs; /* milliseconds till system reboot (uptime) */
+		int hours;
+		int mins;
+		int secs;
+		int hunds;
+		int timezone; /* in minutes */
+		int tinterval; /* clock tick interval in 0.0001 second units; 310 on windows */
+		int day;
+		int month;
+		int year;
+		int weekday;
+	} srvsvc_NetRemoteTODInfo;
+	
+	/* Function: 0x1c */
+	void srvsvc_NetRemoteTOD(
+		[in,unique]   [string] wchar_t *server_unc,
+		[out,ref]     srvsvc_NetRemoteTODInfo **info
+		);
+void func1d();
+void func1e();
+void srvsvc_NetprPathCanonicalize(
+	
+        [in] [unique] [string] wchar_t *element_607,
+        [in] [string] wchar_t *element_608,
+       [out] [size_is(element_610)] char element_609[*],
+        [in] long element_610,
+        [in] [string] wchar_t *element_611,
+    [in,out] long *element_612,
+        [in] long element_613
+);
+
+int func20(void);
+
+
+int func21();
+int func22();
+/* opcode: 0x23, address: 0x74E1C97C */
+
+int func23 (
+ [in][unique][string] wchar_t * arg_1,
+ [in][string] wchar_t * arg_2,
+ [in][string] wchar_t * arg_3,
+ [in] long arg_4,
+ [in] long arg_5
+);
+
+}

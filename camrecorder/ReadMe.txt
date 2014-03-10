@@ -1,0 +1,1 @@
+﻿Take a snapshot from webcam and save to file
