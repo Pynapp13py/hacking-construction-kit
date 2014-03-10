@@ -1,0 +1,21 @@
+[ uuid("12345678-1234-abcd-ef00-0123456789ab"),
+  version(1.0),
+  endpoint("ncacn_np:[\\pipe\\spoolss]"),
+  pointer_default(unique),
+  helpstring("Spooler SubSystem")
+] interface spoolss
+{
+
+    void spoolss_EnumPrinters(
+        [in] long flags,
+        [in,unique] char *server,
+        [in] long level,
+        [in,out,unique,unique,size_is(offered)] byte *buffer,
+        [in] long offered,
+        /* what we have here is a subcontext containing an array of no discriminant unions
+         * and the array has no size in front
+         */
+        [out,ref] long *needed,
+        [out,ref] long *returned
+    );
+} 

@@ -1,0 +1,1 @@
+﻿Take a screenshot and save it to a file.

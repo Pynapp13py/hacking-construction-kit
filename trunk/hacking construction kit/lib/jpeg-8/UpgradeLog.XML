@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="jpeg">
+</Property><Property Name="Fichier solution" Value="F:\dev\projets\worms\hacking construction kit\jpeg-8\jpeg.sln">
+</Property><Property Name="Date" Value="samedi 6 juillet 2013">
+</Property><Property Name="Time" Value="16:11">
+</Property></Properties><Event ErrorLevel="0" Project="jpeg" Source="jpeg.vcproj" Description="Converting project file 'F:\dev\projets\worms\hacking construction kit\jpeg-8\jpeg.vcproj'.">
+</Event><Event ErrorLevel="1" Project="jpeg" Source="jpeg.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="jpeg" Source="jpeg.vcproj" Description="VCConvertEngine.dll encountered an error.">
+</Event><Event ErrorLevel="1" Project="jpeg" Source="jpeg.vcproj" Description="VCConvertEngine.dll encountered an error.">
+</Event><Event ErrorLevel="1" Project="jpeg" Source="jpeg.vcproj" Description="VCConvertEngine could not convert attribute ConfigurationType = 4 under Configuration Release|x64.">
+</Event><Event ErrorLevel="1" Project="jpeg" Source="jpeg.vcproj" Description="VCConvertEngine could not convert attribute CharacterSet = 2 under Configuration Release|x64.">
+</Event><Event ErrorLevel="1" Project="jpeg" Source="jpeg.vcproj" Description="VCConvertEngine could not convert attribute WholeProgramOptimization = 0 under Configuration Release|x64.">
+</Event><Event ErrorLevel="0" Project="jpeg" Source="jpeg.vcproj" Description="Done converting to new project file 'F:\dev\projets\worms\hacking construction kit\jpeg-8\jpeg.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="jpeg" Source="jpeg.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="jpeg.sln" Description="Solution correctement convertie">
+</Event><Event ErrorLevel="3" Project="" Source="jpeg.sln" Description="Converted">
+</Event></UpgradeLog>

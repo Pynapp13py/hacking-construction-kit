@@ -1,0 +1,1 @@
+﻿Find an open port (139) and try to know which os is running
